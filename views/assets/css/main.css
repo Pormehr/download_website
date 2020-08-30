@@ -1,0 +1,54 @@
+a{
+    text-align: center;
+}
+
+#close{
+    position: relative;
+    left: -10px;
+}
+
+#name, #pass, #email{
+    text-align: right;
+}
+
+#userMenu{
+    width: 180px !important;
+    top: -50px;
+    height: -50px !important;
+}
+
+#wallet{
+    position: relative;
+    top: -15px;
+}
+
+#user span{
+    position: relative;
+    top: 5px;
+}
+
+#carousel{
+    height: 500px !important;
+}
+
+#best{
+    text-align: center;
+    /* padding: 2px; */
+}
+
+#carousel2{
+    position: relative;
+    top: -30px !important;
+}
+
+
+@media screen and (max-width: 736px) {
+    #carousel{
+        height: 320px !important;
+    }
+    #carousel2{
+        position: relative;
+        top: -60px !important;
+    }
+  }
+

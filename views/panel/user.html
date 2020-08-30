@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/materialize.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/panel.css">
+    <title>دانلود سنتر</title>
+</head>
+<body>
+    <nav class="nav-wrapper">
+        <div class="container">
+            <a href="../index.php" class="brand-logo right">Logo</a>
+            <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="#">فیلم و سریال</a></li>
+              <li><a href="#">موسیقی</a></li>
+              <li><a href="#">عکس‌</a></li>
+            </ul>
+            <ul class="left hide-on-med-and-down">
+                <!-- <li><a class="waves-effect waves-light btn modal-trigger" href="#login">خروج</a></li> -->
+                <li id="user"><a class='dropdown-trigger' href="#" data-target='userMenu'>نام کاربر<span class="material-icons">face</span></a></li>
+                <li><p id="wallet">ارزش کیف پول: ۰ریال</p></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Side nav-->
+    <ul class="sidenav" id="mobile-links">
+        <li><a href="#">فیلم و سریال</a></li>
+        <li><a href="#">موسیقی</a></li>
+        <li><a href="#">عکس‌</a></li>
+        <li><a class="waves-effect waves-light btn modal-trigger" href="#login">صفحه کاربری</a></li>
+        <li><a class="waves-effect waves-light btn modal-trigger" href="#index.html">خروج</a></li>
+    </ul>
+
+    <!-- Dropdown Structure -->
+  <ul id='userMenu' class='dropdown-content'>
+    <li><a href="#!">تغییرات کاربری</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">شارژ کیف پول</a></li>
+    <li><a href="#!">خروج</a></li>
+  </ul>
+
+  <!--main section-->
+    <form action="" method="post" enctype="multipart/form-data">
+         <div class="file-upload">
+        <button name="upload_img" class="file-upload-btn waves-effect waves-light btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">اضافه کردن عکس</button>
+         <div class="image-upload-wrap">
+          <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+          <div class="drag-text">
+            <h3>عکس را می‌توانید مستقیم از اینجا به اشتراک بگذارید</h3>
+          </div>
+            </div>
+            <div class="file-upload-content">
+          <img class="file-upload-image" src="#" alt="your image" />
+          <div class="image-title-wrap">
+            <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+          </div>
+                <input type="hidden" name="upload_img" value="1">
+                <button type="submit" >Submit</button>
+            </div>
+         </div>
+    </form>
+
+    <!--Upload photoes here-->
+    <div>
+      <img src="" alt="">
+    </div>
+
+
+    <script src="../assets/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/js/materialize.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <script>
+        $('document').ready(function(){
+            $('.sidenav').sidenav();
+            $('.modal').modal();
+        })
+    </script>
+</body>
+</html>
